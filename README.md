@@ -3,7 +3,7 @@
 This is a repository that I made or I am doing during Udemy "Modern React with Redux" course.
 I divide each section into branches:
 
-- master: sample of comments section (basics of components interaction)
+- main: sample of comments section (basics of components interaction)
 - seasons_app: understanding state and lifecycle methods
 - pic_loading: getting images from Unsplash - handling inputs and making API request
 
