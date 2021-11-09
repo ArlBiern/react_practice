@@ -1,10 +1,12 @@
-import React from "react";
-// import Accordion from "./Accordion";
-//import Search from "./Search";
-//import Dropdown from "./Dropdown";
+import React, { useState } from "react";
+import Accordion from "./Accordion";
+import Search from "./Search";
+import Dropdown from "./Dropdown";
 import Translate from "./Translate";
+import Route from "./Route";
+import Header from "./Header";
 
-/* const items = [
+const items = [
   {
     title: "What is react",
     content: "React is a front edn js library",
@@ -17,9 +19,9 @@ import Translate from "./Translate";
     title: "What do you use React",
     content: "You use Ract by creating components",
   },
-]; */
+];
 
-/* const options = [
+const options = [
   {
     label: "The Color Red",
     value: "red",
@@ -32,14 +34,37 @@ import Translate from "./Translate";
     label: "The Color Blue",
     value: "blue",
   },
-]; */
+];
 
 const App = () => {
-  //const [selected, setSelected] = useState(options[0]);
-  //const [showDropdown, setShowDropdown] = useState(true);
+  const [selected, setSelected] = useState(options[0]);
+  const [showDropdown, setShowDropdown] = useState(true);
 
   return (
     <div>
+      <Header />
+      <Route path="/">
+        <Accordion items={items} />
+      </Route>
+      <Route path="/search">
+        <Search />
+      </Route>
+      <Route path="/dropdown">
+        <button onClick={() => setShowDropdown(!showDropdown)}>
+          Toggle dropdown
+        </button>
+        {showDropdown ? (
+          <Dropdown
+            options={options}
+            selected={selected}
+            onSelectedChange={setSelected}
+            label="Select a color"
+          />
+        ) : null}
+      </Route>
+      <Route path="/translate">
+        <Translate />
+      </Route>
       {/* <Accordion items={items} /> */}
       {/* <Search /> */}
       {/* <button onClick={() => setShowDropdown(!showDropdown)}>
@@ -52,7 +77,6 @@ const App = () => {
           onSelectedChange={setSelected}
         />
       ) : null} */}
-      <Translate />
     </div>
   );
 };
