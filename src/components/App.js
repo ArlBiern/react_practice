@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 // import Accordion from "./Accordion";
 //import Search from "./Search";
-import Dropdown from "./Dropdown";
+//import Dropdown from "./Dropdown";
+import Translate from "./Translate";
 
 /* const items = [
   {
@@ -18,7 +19,7 @@ import Dropdown from "./Dropdown";
   },
 ]; */
 
-const options = [
+/* const options = [
   {
     label: "The Color Red",
     value: "red",
@@ -31,17 +32,17 @@ const options = [
     label: "The Color Blue",
     value: "blue",
   },
-];
+]; */
 
 const App = () => {
-  const [selected, setSelected] = useState(options[0]);
-  const [showDropdown, setShowDropdown] = useState(true);
+  //const [selected, setSelected] = useState(options[0]);
+  //const [showDropdown, setShowDropdown] = useState(true);
 
   return (
     <div>
       {/* <Accordion items={items} /> */}
       {/* <Search /> */}
-      <button onClick={() => setShowDropdown(!showDropdown)}>
+      {/* <button onClick={() => setShowDropdown(!showDropdown)}>
         Toggle dropdown
       </button>
       {showDropdown ? (
@@ -50,7 +51,8 @@ const App = () => {
           selected={selected}
           onSelectedChange={setSelected}
         />
-      ) : null}
+      ) : null} */}
+      <Translate />
     </div>
   );
 };
