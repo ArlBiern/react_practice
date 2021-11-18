@@ -6,6 +6,7 @@ I divide each section into branches:
 - main: sample of comments section (basics of components interaction)
 - seasons_app: understanding state and lifecycle methods
 - pic_loading: getting images from Unsplash - handling inputs and making API request. You need to add your ClientID in ./api/unsplash.js for the application to work properly.
+- hooks_practice: creating come simple vidgets with functional components and react hooks
 
 To run app use:
 
